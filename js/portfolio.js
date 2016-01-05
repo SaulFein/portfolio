@@ -22,17 +22,19 @@ Project.prototype.toHtml = function() {
 
   $newProject.find('h1').html(this.title);
   // Include the publication date as a 'title' attribute to show on hover:
-  $newProject.find('time[pubdate]').attr('title', this.publishedOn)
+  $newProject.find('time[pubdate]').attr('title', this.publishedOn);
 
   // Display the date as a relative number of "days ago":
-  $newProject.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago')
+  $newProject.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
 
   $newProject.append('<hr>');
   $newProject.attr('class', '');
+  // $(article).removeClass('template');
+
   // TODO: This cloned article is no longer a template, so we should remove that class...
 
   return $newProject;
-}
+};
 
 rawData.sort(function(a,b) {
   return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
@@ -40,8 +42,8 @@ rawData.sort(function(a,b) {
 
 rawData.forEach(function(ele) {
   projects.push(new Project(ele));
-})
+});
 
 projects.forEach(function(a){
-  $('#articles').append(a.toHtml())
+  $('#projects').append(a.toHtml());
 });
