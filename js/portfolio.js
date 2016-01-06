@@ -1,7 +1,6 @@
 var projects = [];
 
 function Project (opts) {
-  this.opts = opts;
   this.title = opts.title;
   this.category = opts.category;
   this.author = opts.author;
@@ -12,27 +11,21 @@ function Project (opts) {
 
 Project.prototype.toHtml = function() {
   var $newProject = $('article.template').clone();
-
-  $newProject.data('category', this.category);
+  $newProject.removeClass('template');
+  if (!this.publishedOn) {
+    $newProject.addClass('draft');
+  }
+  $newProject.attr('data-category', this.category);
+  //author data!
   $newProject.data('author', this.author);
-  $newProject.data('authorUrl', this.authorUrl);
-  $newProject.data('title', this.title);
-  $newProject.data('body', this.body);
-  $newProject.data('publishedOn', this.publishedOn);
-
-  $newProject.find('h1').html(this.title);
-  // Include the publication date as a 'title' attribute to show on hover:
+  $newProject.find('.byline a').html(this.author);
+  $newProject.find('.byline a').attr('href', this.authorUrl);
+  $newProject.find('h1:first').html(this.title);
+  $newProject.find('.article-body').html(this.body);
+  $newProject.find('time[pubdate]').attr('datetime', this.publishedOn);
   $newProject.find('time[pubdate]').attr('title', this.publishedOn);
-
-  // Display the date as a relative number of "days ago":
   $newProject.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
-
   $newProject.append('<hr>');
-  $newProject.attr('class', '');
-  // $(article).removeClass('template');
-
-  // TODO: This cloned article is no longer a template, so we should remove that class...
-
   return $newProject;
 };
 
@@ -45,5 +38,5 @@ rawData.forEach(function(ele) {
 });
 
 projects.forEach(function(a){
-  $('#projects').append(a.toHtml());
+  $('#articles').append(a.toHtml());
 });

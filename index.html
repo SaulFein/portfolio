@@ -3,46 +3,72 @@
   <head>
     <meta charset="UTF-8">
     <title>Brandon Feinstein Portfolio</title>
-    <link rel="stylesheet" href="style/layout.css">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="vendor/styles/normalize.css">
+    <link rel="stylesheet" href="style/icons.css">
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/modules.css">
+
   </head>
   <body>
-    <main>
-        <header>
+        <header class="site-header">
           <h1>
             Brandon Feinstein Web Development
           </h1>
         </header>
-        <nav>
+        <nav class="main-nav">
           <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Projects</li>
-            <li>Blog</li>
-            <li>Contact</li>
-            <li><a href="https://twitter.com/SaulFein" target="_blank">Twitter</a></li>
-            <li><a href="https://github.com/SaulFein" target="_blank">Github</a></li>
+            <li class="tab icon-home" data-content="articles">Home</li>
+            <li class="tab icon-rocket" data-content="about">About</li>
+            <li class="icon-twitter3"><a href="https://twitter.com/SaulFein" target="_blank">Twitter</a></li>
+            <li class="icon-github"><a href="https://github.com/SaulFein" target="_blank">Github</a></li>
         </ul>
         </nav>
-        <section id="projects">
+        <main>
+        <section id="articles" class="tab-content">
+          <div>
+            <ul id="filters">
+            <li>
+              <select id="author-filter">
+                <option value="">-- Filter by Authors --</option>
+              </select>
+            </li>
+            <li>
+              <select id="category-filter">
+                <option value="">-- Filter by Categories --</option>
+              </select>
+            </li>
+          </ul>
+        </div>
           <article class="template" data-category="cat">
             <header>
-              <h1></h1>
-              <div class="byline">
-                <address><a href=""></a></address>
-                <time pubdate datetime="2000-01-01"></time>
+              <h1>Title</h1>
+            <div class="byline">
+              By <address><a href="">Author Name</a></address>
+              published <time pubdate datetime="2000-01-01">Publish Time</time>datetime="2000-01-01"></time>
               </div>
             </header>
             <section class="article-body"></section>
           </article>
         </section>
-      </div>
+        <section id="about" class="tab-content">
+        <header>
+          Welcome to my Blog
+        </header>
+        <section>
+          <h1>Some of my intrests:</h1>
+          <ul>
+            <li>Coding</li>
+            <li>Sharing what I've learned</li>
+            <li>Hanging with my family</li>
+          </ul>
+        </section>
+      </section>
     </main>
     <footer>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="js/my_projects.js"></script>
     <script src="js/portfolio.js"></script>
-
+    <!-- <script src="js/portfolio_view.js"></script> -->
   </body>
 </html>
