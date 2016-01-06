@@ -18,7 +18,7 @@ var rawData = [
   {
     title:       'Pat\'s Salmon Coookies',
     category:    'retail website',
-    author:      'Brando Feinstein',
+    author:      'Brandon Feinstein',
     authorUrl:   'http://saulfein.github.io/cookie-stand/ & http://saulfein.github.io/cookie-stand/sales.html',
     publishedOn: '2015-11-08',
     body:        '<p>Pat\'s Salmon Cookies website and sales data site: This is a website for Pat\'s Salmon cookies created using JS, HTML and CSS. The customer facing website shows shop locations, history of the Salmon cookie, menu items, and merch.</p>'

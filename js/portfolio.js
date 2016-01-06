@@ -1,42 +1,42 @@
-var projects = [];
+var articles = [];
 
-function Project (opts) {
-  this.title = opts.title;
-  this.category = opts.category;
+function Article (opts) {
   this.author = opts.author;
   this.authorUrl = opts.authorUrl;
-  this.publishedOn = opts.publishedOn;
+  this.title = opts.title;
+  this.category = opts.category;
   this.body = opts.body;
+  this.publishedOn = opts.publishedOn;
 }
 
-Project.prototype.toHtml = function() {
-  var $newProject = $('article.template').clone();
-  $newProject.removeClass('template');
+Article.prototype.toHtml = function() {
+  var $newArticle = $('article.template').clone();
+  $newArticle.removeClass('template');
   if (!this.publishedOn) {
-    $newProject.addClass('draft');
+    $newArticle.addClass('draft');
   }
-  $newProject.attr('data-category', this.category);
+  $newArticle.attr('data-category', this.category);
   //author data!
-  $newProject.data('author', this.author);
-  $newProject.find('.byline a').html(this.author);
-  $newProject.find('.byline a').attr('href', this.authorUrl);
-  $newProject.find('h1:first').html(this.title);
-  $newProject.find('.article-body').html(this.body);
-  $newProject.find('time[pubdate]').attr('datetime', this.publishedOn);
-  $newProject.find('time[pubdate]').attr('title', this.publishedOn);
-  $newProject.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
-  $newProject.append('<hr>');
-  return $newProject;
-};
+  $newArticle.data('author', this.author);
+  $newArticle.find('.byline a').html(this.author);
+  $newArticle.find('.byline a').attr('href', this.authorUrl);
+  $newArticle.find('h1:first').html(this.title);
+  $newArticle.find('.article-body').html(this.body);
+  $newArticle.find('time[pubdate]').attr('datetime', this.publishedOn)
+  $newArticle.find('time[pubdate]').attr('title', this.publishedOn)
+  $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago')
+  $newArticle.append('<hr>');
+  return $newArticle;
+}
 
 rawData.sort(function(a,b) {
   return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
 });
 
 rawData.forEach(function(ele) {
-  projects.push(new Project(ele));
-});
+  articles.push(new Article(ele));
+})
 
-projects.forEach(function(a){
-  $('#articles').append(a.toHtml());
+articles.forEach(function(a){
+  $('#articles').append(a.toHtml())
 });
