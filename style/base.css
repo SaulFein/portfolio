@@ -10,11 +10,11 @@ hr {
 }
 
 header{
-  background-color: #AA5585;
+  background-color: #2D48C4;
 }
 
 nav{
-  background-color: #A9C967;
+  background-color: #F77A52;
 }
 /*TEXT STYLES
 =======================================*/
@@ -34,13 +34,13 @@ address {
 
 li{
   list-style: none;
-  color: #661141;
+  color: black;
 }
 /*LINK STYLES
 =======================================*/
 
 a, a:link, a:active {
-  color: #661141;
+  color: black;
 }
 
 a:hover, a:focus {
