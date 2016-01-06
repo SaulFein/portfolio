@@ -1,7 +1,7 @@
 // Configure a view object, to hold all our functions for dynamic updates and article-related event handlers.
-var articleView = {};
+var projectView = {};
 
-articleView.populateFilters = function() {
+projectView.populateFilters = function() {
   $('article').each(function() {
     if (!$(this).hasClass('template')) {
       // DONE: We need to take every author name from the page, and make it an option in the Author filter.
@@ -26,7 +26,7 @@ articleView.populateFilters = function() {
   });
 };
 
-articleView.handleCategoryFilter = function() {
+projectView.handleCategoryFilter = function() {
   $('#category-filter').on('change', function() {
     if ($(this).val()) {
       $('article').hide();
@@ -46,7 +46,7 @@ articleView.handleCategoryFilter = function() {
 
 };
 
-articleView.handleMainNav = function() {
+projectView.handleMainNav = function() {
 
   $('.main-nav .tab').on('click', function(event) {
     var $targetData = $(this).data('content');
@@ -62,7 +62,7 @@ articleView.handleMainNav = function() {
   $('.main-nav .tab:first').click(); // Let's now trigger a click on the first .tab element, to set up the page.
 };
 
-articleView.setTeasers = function() {
+projectView.setTeasers = function() {
   $('.article-body *:nth-of-type(n+2)').hide(); // Hide elements beyond the first 2 in any artcile body.
 
   $('.read-on').on('click', function(e){
@@ -74,8 +74,8 @@ articleView.setTeasers = function() {
 };
 
 $(document).ready(function() {
-  articleView.populateFilters();
-  articleView.handleCategoryFilter();
-  articleView.handleMainNav();
-  articleView.setTeasers();
+  projectView.populateFilters();
+  projectView.handleCategoryFilter();
+  projectView.handleMainNav();
+  projectView.setTeasers();
 });
