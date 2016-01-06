@@ -26,25 +26,6 @@ articleView.populateFilters = function() {
   });
 };
 
-articleView.handleAuthorFilter = function() {
-  $('#author-filter').on('change', function() {
-    if ($(this).val()) {
-      $('article').hide();
-      $('article:not(.template)').each(function(){
-        if ($(this).data('author') === $('#author-filter option:selected').text()){
-          $(this).show();
-        }
-      });
-
-    } else {
-        $('article:not(.template)').show();
-
-
-    }
-    $('#category-filter').val('');
-  });
-};
-
 articleView.handleCategoryFilter = function() {
   $('#category-filter').on('change', function() {
     if ($(this).val()) {
@@ -56,7 +37,7 @@ articleView.handleCategoryFilter = function() {
       });
 
     } else {
-        $('article:not(.template)').show();
+      $('article:not(.template)').show();
 
 
     }
@@ -93,9 +74,8 @@ articleView.setTeasers = function() {
 };
 
 $(document).ready(function() {
-    articleView.populateFilters();
-    articleView.handleAuthorFilter();
-    articleView.handleCategoryFilter();
-    articleView.handleMainNav();
-    articleView.setTeasers();
+  articleView.populateFilters();
+  articleView.handleCategoryFilter();
+  articleView.handleMainNav();
+  articleView.setTeasers();
 });
