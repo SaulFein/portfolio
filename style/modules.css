@@ -1,14 +1,31 @@
-body{
-  background-color: #F3FAE4;
-}
 .site-header {
-  padding: .1em;
+  background: #FFEAAA;
+}
+
+.heading-group-h1 {
+  float: left;
+  padding: 0 0 .2em 1em;
+}
+
+
+.icon-menu {
+ float: right;
+ font-size: 20px;
 }
 
 .main-nav {
+  padding: 0.1em;
+}
+
+.main-nav ul {
+  display: none;
   padding: 0;
   list-style: none;
   clear: both;
+}
+
+.main-nav:hover ul {
+  display: block;
 }
 
 .main-nav li {
@@ -18,21 +35,17 @@ body{
   border-bottom: 1px solid #ccc;
 }
 
-
 #filters {
   padding: 0;
   list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-#filters select {
-
 }
 
 .template {
   display: none;
+}
+
+.byline {
+  color: #777;
 }
 
 .byline a {
@@ -40,10 +53,27 @@ body{
   text-decoration: none;
 }
 
-.pull-left {
-  float: left;
+.mobile-trigger {
+  width: 10%;
+  float: right;
 }
 
-.pull-right {
-  float: right;
+.icon-menu {
+  hide
+}
+
+
+@media only screen and (min-width: 640px) {
+  .icon-menu {
+    display: none;
+}
+
+.main-nav ul {
+  display: block;
+}
+
+.main-nav li {
+  display: inline;
+}
+
 }
