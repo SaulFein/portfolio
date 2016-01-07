@@ -1,0 +1,50 @@
+body {
+  line-height: 1.5;
+  font-size: 100%;
+  color: #313131;
+}
+
+hr {
+  margin: 1em;
+  width: 80%;
+}
+
+header{
+  background-color: #2D48C4;
+}
+
+nav{
+  background-color: #F77A52;
+}
+/*TEXT STYLES
+=======================================*/
+p {
+  font-size: 1em;
+}
+
+h1{
+  color: black;
+}
+address {
+  display: inline-block;
+}
+.byline{
+  color: black;
+}
+
+li{
+  list-style: none;
+  color: black;
+}
+/*LINK STYLES
+=======================================*/
+
+a, a:link, a:active {
+  color: black;
+}
+
+a:hover, a:focus {
+}
+
+a:visited {
+}
