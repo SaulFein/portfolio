@@ -1,4 +1,6 @@
 var projects = [];
+var appTemplate = $('#my-message').html();
+var compiledTemplate = Handlebars.compile(appTemplate);
 
 function Project (opts) {
   this.author = opts.author;
@@ -10,23 +12,18 @@ function Project (opts) {
 }
 
 Project.prototype.toHtml = function() {
-  var $newProject = $('article.template').clone();
-  $newProject.removeClass('template');
-  if (!this.publishedOn) {
-    $newProject.addClass('draft');
+  var appTemplate = $('#my-message').html();
+  var compiledTemplate = Handlebars.compile(appTemplate);
+  for(var i =0; i < rawData.length; i++) {
+    var html = compiledTemplate(rawData[i]);
+    this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
+    this.publishStatus = this.publishedOn ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
+    $('#articles').append(html);
   }
-  $newProject.attr('data-category', this.category);
-  //author data!
-  $newProject.data('author', this.author);
-  $newProject.find('.byline a').html(this.author);
-  $newProject.find('.byline a').attr('href', this.authorUrl);
-  $newProject.find('h1:first').html(this.title);
-  $newProject.find('.article-body').html(this.body);
-  $newProject.find('time[pubdate]').attr('datetime', this.publishedOn);
-  $newProject.find('time[pubdate]').attr('title', this.publishedOn);
-  $newProject.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
-  $newProject.append('<hr>');
-  return $newProject;
+  // DONE: If your template will use properties that aren't on the object yet, add them.
+  //   Since your template can't hold any JS logic, we need to execute the logic here.
+  //   The result is added to the object as a new property, which can then be referenced by key in the template.
+  //   For example, you might want to display how old a post is, or say "(draft)" if it has no publication date:
 };
 
 rawData.sort(function(a,b) {
@@ -37,6 +34,4 @@ rawData.forEach(function(ele) {
   projects.push(new Project(ele));
 });
 
-projects.forEach(function(a){
-  $('#articles').append(a.toHtml());
-});
+Project.prototype.toHtml();

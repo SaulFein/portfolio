@@ -6,11 +6,25 @@
     <link rel="stylesheet" href="vendor/styles/normalize.css">
     <link rel="stylesheet" href="style/icons.css">
     <link rel="stylesheet" href="style/base.css">
-    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="style/layout.css">
     <link rel="stylesheet" href="style/modules.css">
+    <script id="my-message" type="text/x-handlebars-template">
+      <article data-category="{{category}}">
+        <header>
+          <h1>{{title}}</h1>
+          <div class="byline">
+            By <address><a href="">{{author}}</a></address>
+            published <time pubdate datetime="2000-01-01">{{publishedOn}}</time>
+          </div>
+        </header>
+        <section class="article-body">{{{body}}}</section>
+        <a href="#" class="read-on">Read on &rarr;</a>
+      </article>
+    </script>
+
   </head>
   <body>
-    <header class="site-header clearfix">
+    <header class="site-header clearfix" id="firstheader">
       <section class="heading-group-h1">
         <h1>
           Brandon Feinstein Web Development
@@ -66,6 +80,7 @@
       <footer>
       </footer>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js" charset="utf-8"></script>
       <script src="js/my_projects.js"></script>
       <script src="js/portfolio.js"></script>
       <script src="js/portfolio_view.js"></script>
