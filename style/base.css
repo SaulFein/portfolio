@@ -2,6 +2,7 @@ body {
   line-height: 1.5;
   font-size: 100%;
   color: #313131;
+  background-color: #FFD596;
 }
 
 img {
@@ -13,26 +14,49 @@ hr {
   width: 80%;
 }
 
+.list-menu {
+  font-family: 'Raleway', sans-serif;
+
+}
+
 header{
-  background-color: #2D48C4;
+  background-color: #9BB58F;
+  padding: 1%;
 }
 
 #firstheader {
-  background-color: #F77A52;
+  background-color: #9BB58F;
 }
 
 nav{
-  background-color: #F77A52;
+  background-color: #9BB58F;
 }
+
+#category-filter {
+  background-color: grey;
+  color:
+}
+
 /*TEXT STYLES
 =======================================*/
 p {
   font-size: 1em;
+  font-family: 'Raleway', sans-serif;
+  padding: 1%;
 }
 
 h1{
-  color: black;
+  color: #302B2F;
+  font-family: 'Rokkitt', serif;
+  font-weight: 400;
 }
+
+h1.mytitle {
+  font-family: 'Rokkitt', serif;
+  font-size: 3em;
+  font-weight: 700;
+}
+
 address {
   display: inline-block;
 }
@@ -40,15 +64,20 @@ address {
   color: black;
 }
 
-li{
+li {
   list-style: none;
-  color: black;
+  color: #302B2F;
+  font-family: 'Rokkitt', serif;
+  font-weight: 400;
 }
 /*LINK STYLES
 =======================================*/
 
 a, a:link, a:active {
-  color: black;
+  list-style: none;
+  color: #302B2F;
+  font-family: 'Rokkitt', serif;
+  font-weight: 400;
 }
 
 a:hover, a:focus {
