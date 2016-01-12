@@ -1,22 +1,13 @@
 // Configure a view object, to hold all our functions for dynamic updates and article-related event handlers.
-var projectView = {};
+var articleView = {};
 
-projectView.populateFilters = function() {
+articleView.populateFilters = function() {
   $('article').each(function() {
     if (!$(this).hasClass('template')) {
-      // DONE: We need to take every author name from the page, and make it an option in the Author filter.
-      //       To do so, Build an `option` DOM element that we can append to the author select box.
-      //       Start by grabbing the author's name from `this` article element, and then use that bit of
-      //       text to create the option tag (in a variable named `optionTag`),
-      //       that we can append to the #author-filter select element.
-      //       YAY, DOM manipulation!
       var val = $(this).find('address a').text();
       var optionTag = '<option value="' + val + '">' + val + '</option>';
       $('#author-filter').append(optionTag);
 
-      // DONE: Similar to the above, but...
-      //       Avoid duplicates! We don't want to append the category name if the select
-      //       already has this category as an option!
       val = $(this).attr('data-category');
       optionTag = '<option value="' + val + '">' + val + '</option>';
       if ($('#category-filter option[value="' + val + '"]').length === 0) {
@@ -26,27 +17,20 @@ projectView.populateFilters = function() {
   });
 };
 
-projectView.handleCategoryFilter = function() {
+articleView.handleCategoryFilter = function() {
   $('#category-filter').on('change', function() {
     if ($(this).val()) {
       $('article').hide();
-      $('article:not(.template)').each(function(){
-        if ($(this).data('category') === $('#category-filter option:selected').text()){
-          $(this).show();
-        }
-      });
-
+      $('article[data-category="' + $(this).val() + '"]').fadeIn();
     } else {
-      $('article:not(.template)').show();
-
-
+      $('article').fadeIn();
+      $('article.template').hide();
     }
     $('#author-filter').val('');
   });
-
 };
 
-projectView.handleMainNav = function() {
+articleView.handleMainNav = function() {
 
   $('.main-nav .tab').on('click', function(event) {
     var $targetData = $(this).data('content');
@@ -62,7 +46,7 @@ projectView.handleMainNav = function() {
   $('.main-nav .tab:first').click(); // Let's now trigger a click on the first .tab element, to set up the page.
 };
 
-projectView.setTeasers = function() {
+articleView.setTeasers = function() {
   $('.article-body *:nth-of-type(n+2)').hide(); // Hide elements beyond the first 2 in any artcile body.
 
   $('.read-on').on('click', function(e){
@@ -72,10 +56,51 @@ projectView.setTeasers = function() {
   });
 
 };
+articleView.initNewArticlePage = function() {
+  $('.tab-content').show();
+  $('#export-field').hide();
+  $('#article-json').on('focus', function(){
+    this.select();
+  });
 
-$(document).ready(function() {
-  projectView.populateFilters();
-  projectView.handleCategoryFilter();
-  projectView.handleMainNav();
-  projectView.setTeasers();
-});
+  $('#new-form').on('change', 'input, textarea', articleView.create);
+};
+
+articleView.create = function() {
+  var article;
+  $('#articles').empty();
+
+  // Instantiate an article based on what's in the form fields:
+  article = new Article({
+    title: $('#article-title').val(),
+    author: $('#article-author').val(),
+    authorUrl: $('#article-author-url').val(),
+    category: $('#article-category').val(),
+    body: $('#article-body').val(),
+    publishedOn: $('#article-published:checked').length ? util.today() : null
+  });
+
+  // Use the Handblebars template to put this new article into the DOM:
+  $('#articles').append(article.toHtml());
+
+  // Activate the highlighting of any code blocks:
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+
+  // Export the new article as JSON, so it's ready to copy/paste into blogArticles.js:
+  $('#export-field').show();
+  $('#article-json').val(JSON.stringify(article) + ',');
+};
+
+
+articleView.initIndexPage = function() {
+  Article.all.forEach(function(a){
+    $('#articles').append(a.toHtml());
+  });
+
+  articleView.populateFilters();
+  articleView.handleCategoryFilter();
+  articleView.handleMainNav();
+  articleView.setTeasers();
+};
