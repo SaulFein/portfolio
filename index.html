@@ -9,20 +9,20 @@
     <link rel="stylesheet" href="style/layout.css">
     <link rel="stylesheet" href="style/modules.css">
     <link href='https://fonts.googleapis.com/css?family=Rokkitt:400,700|Raleway' rel='stylesheet' type='text/css'>
-    <script id="my-message" type="text/x-handlebars-template">
-      <article data-category="{{category}}">
+
+    <script id="article-template" type="text/x-handlebars-template">
+      <article class="clearfix" data-category="{{category}}">
         <header>
           <h1>{{title}}</h1>
           <div class="byline">
-            By <address><a href="">{{author}}</a></address>
-            published <time pubdate datetime="2000-01-01">{{publishedOn}}</time>
+            By <address><a href="{{authorUrl}}">{{author}}</a></address>
+            {{publishStatus}}
           </div>
         </header>
         <section class="article-body">{{{body}}}</section>
         <a href="#" class="read-on">Read on &rarr;</a>
       </article>
     </script>
-
   </head>
   <body>
     <header class="site-header clearfix" id="firstheader">
@@ -82,8 +82,11 @@
       </footer>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js" charset="utf-8"></script>
-      <script src="js/my_projects.js"></script>
+      <script src="/vendor/scripts/marked.js"></script>
       <script src="js/portfolio.js"></script>
       <script src="js/portfolio_view.js"></script>
+      <script>
+      Article.fetchAll();
+    </script>
   </body>
 </html>

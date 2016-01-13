@@ -1,37 +1,47 @@
-var projects = [];
-var appTemplate = $('#my-message').html();
-var compiledTemplate = Handlebars.compile(appTemplate);
+(function(module) {
+  function Article (opts) {
+    this.author = opts.author;
+    this.authorUrl = opts.authorUrl;
+    this.title = opts.title;
+    this.category = opts.category;
+    this.body = opts.body;
+    this.publishedOn = opts.publishedOn;
+  }
 
-function Project (opts) {
-  this.author = opts.author;
-  this.authorUrl = opts.authorUrl;
-  this.title = opts.title;
-  this.category = opts.category;
-  this.body = opts.body;
-  this.publishedOn = opts.publishedOn;
-}
+  Article.all = [];
 
-Project.prototype.toHtml = function() {
-  var appTemplate = $('#my-message').html();
-  var compiledTemplate = Handlebars.compile(appTemplate);
-  for(var i =0; i < rawData.length; i++) {
-    var html = compiledTemplate(rawData[i]);
+  Article.prototype.toHtml = function() {
+    var template = Handlebars.compile($('#article-template').text());
+
     this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
     this.publishStatus = this.publishedOn ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
-    $('#articles').append(html);
-  }
-  // DONE: If your template will use properties that aren't on the object yet, add them.
-  //   Since your template can't hold any JS logic, we need to execute the logic here.
-  //   The result is added to the object as a new property, which can then be referenced by key in the template.
-  //   For example, you might want to display how old a post is, or say "(draft)" if it has no publication date:
-};
+    this.body = marked(this.body);
 
-rawData.sort(function(a,b) {
-  return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
-});
+    return template(this);
+  };
 
-rawData.forEach(function(ele) {
-  projects.push(new Project(ele));
-});
+  Article.loadAll = function(rawData) {
+    rawData.sort(function(a,b) {
+      return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
+    });
+    Article.all = rawData.map(function(ele) {
+      return new Article(ele);
+    });
+  };
 
-Project.prototype.toHtml();
+  Article.fetchAll = function() {
+    if (localStorage.rawData) {
+      Article.loadAll(JSON.parse(localStorage.rawData));
+      articleView.initIndexPage();
+
+    } else {
+      $.getJSON('/data/my_projects.json', function(rawData) { //rawData is not the array of objects
+        Article.loadAll(rawData);
+        localStorage.rawData = JSON.stringify(rawData);
+        articleView.initIndexPage();
+      });
+    }
+  };
+
+  module.Article = Article;
+}) (window);
