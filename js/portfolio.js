@@ -16,7 +16,6 @@ Project.prototype.toHtml = function() {
     $newProject.addClass('draft');
   }
   $newProject.attr('data-category', this.category);
-  //author data!
   $newProject.data('author', this.author);
   $newProject.find('.byline a').html(this.author);
   $newProject.find('.byline a').attr('href', this.authorUrl);
