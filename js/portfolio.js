@@ -24,9 +24,8 @@
     rawData.sort(function(a,b) {
       return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
     });
-
-    rawData.forEach(function(ele) {
-      Article.all.push(new Article(ele));
+    Article.all = rawData.map(function(ele) {
+      return new Article(ele);
     });
   };
 
