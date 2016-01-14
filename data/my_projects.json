@@ -19,7 +19,7 @@
     "title":       "Pats Salmon Coookies",
     "category":    "retail website",
     "author":      "Brandon Feinstein",
-    "authorUrl":   "http://saulfein.github.io/cookie-stand/ & http://saulfein.github.io/cookie-stand/sales.html",
+    "authorUrl":   "http://saulfein.github.io/cookie-stand/",
     "publishedOn": "2015-11-08",
     "body":        "<p>Pats Salmon Cookies website and sales data site: This is a website for Pats Salmon cookies created using JS, HTML and CSS. The customer facing website shows shop locations, history of the Salmon cookie, menu items, and merch.</p>"
   },
