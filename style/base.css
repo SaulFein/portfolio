@@ -2,7 +2,7 @@ body {
   line-height: 1.5;
   font-size: 100%;
   color: #313131;
-  background-color: #FFD596;
+  background-color: #FFF5D1;
 }
 
 img {
@@ -20,16 +20,16 @@ hr {
 }
 
 header{
-  background-color: #9BB58F;
+  background-color: #50514F;
   padding: 1%;
 }
 
 #firstheader {
-  background-color: #9BB58F;
+  background-color: #50514F;
 }
 
 nav{
-  background-color: #9BB58F;
+  background-color: #F25F5C;
 }
 
 #category-filter {
@@ -46,7 +46,7 @@ p {
 }
 
 h1{
-  color: #302B2F;
+  color: #FFF5D1;
   font-family: 'Rokkitt', serif;
   font-weight: 400;
   padding: 1%;

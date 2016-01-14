@@ -41,6 +41,7 @@
 .icon-menu:before {
 	content: "\e902";
 	font-size: 40px;
+	color: #F25F5C;
 }
 .icon-link:before {
 	content: "\e903";

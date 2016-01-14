@@ -9,7 +9,7 @@
 
 
 .icon-menu {
-  position: fixed;
+  position: absolute;
     top: 0;
     right: 1;
  /*float: right;*/
@@ -17,7 +17,9 @@
 }
 
 .main-nav {
-  padding: 0.1em;
+  /*padding: 0.1em;*/ /*this will add a small line in the nav before it is opened in mobile view*/
+  /*padding-left: 2em;
+  padding-right: 2em;*/
   background: ##F77A52;
 }
 
@@ -71,6 +73,15 @@
 @media only screen and (min-width: 640px) {
   .icon-menu {
     display: none;
+}
+
+.main-nav {
+  padding: 0.1em;
+  /*width: 85%;*/
+  margin: auto;
+  /*padding-left: 2em;
+  padding-right: 2em;*/
+  background: ##F77A52;
 }
 
 .main-nav ul {
