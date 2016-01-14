@@ -49,12 +49,14 @@ h1{
   color: #302B2F;
   font-family: 'Rokkitt', serif;
   font-weight: 400;
+  padding: 1%;
 }
 
 h1.mytitle {
   font-family: 'Rokkitt', serif;
   font-size: 3em;
   font-weight: 700;
+  text-align: center;
 }
 
 address {
@@ -78,6 +80,9 @@ a, a:link, a:active {
   color: #302B2F;
   font-family: 'Rokkitt', serif;
   font-weight: 400;
+  padding: 1%;
+  text-decoration: none;
+  font-size: 1.25em;
 }
 
 a:hover, a:focus {
