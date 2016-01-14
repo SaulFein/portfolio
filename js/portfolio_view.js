@@ -78,6 +78,7 @@
       authorUrl: $('#article-author-url').val(),
       category: $('#article-category').val(),
       body: $('#article-body').val(),
+      img: $('#article-img').val(),
       publishedOn: $('#article-published:checked').length ? util.today() : null
     });
 

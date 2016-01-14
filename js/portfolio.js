@@ -6,6 +6,7 @@
     this.category = opts.category;
     this.body = opts.body;
     this.publishedOn = opts.publishedOn;
+    this.img = opts.img;
   }
 
   Article.all = [];
