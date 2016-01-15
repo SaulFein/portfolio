@@ -11,7 +11,8 @@
 .icon-menu {
   position: absolute;
     top: 0;
-    right: 1;
+    right: 0;
+    padding: 1%;
  /*float: right;*/
  font-size: 20px;
 }
@@ -38,7 +39,7 @@
   margin-right: .4em;
   font-size: 1.5em;
   padding: .5em .2em;
-  /*border-bottom: 1px solid #ccc;*/
+  border-bottom: 1px solid #50514F;
 }
 
 #filters {
@@ -81,7 +82,7 @@
   margin: auto;
   /*padding-left: 2em;
   padding-right: 2em;*/
-  background: ##F77A52;
+  background: #F25F5C;
 }
 
 .main-nav ul {
@@ -91,6 +92,8 @@
 
 .main-nav li {
   display: inline;
+  border-bottom: 1px solid #F25F5C;
+
 }
 
 }
