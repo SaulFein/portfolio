@@ -35,9 +35,9 @@
       </section>
       <nav class="main-nav">
         <div class="icon-menu"></div>
-        <ul iclass="list-menu">
-          <li class="tab icon-home" data-content="articles"><a>Home</a></li>
-          <li class="tab icon-rocket" data-content="about"><a>About</a></li>
+        <ul class="list-menu">
+          <li class="tab icon-home" data-content="articles"><a href="/">Home</a></li>
+          <li class="tab icon-rocket" data-content="about"><a href="/about">About</a></li>
           <li class="icon-twitter3"><a href="https://twitter.com/SaulFein" target="_blank">Twitter</a></li>
           <li class="icon-github"><a href="https://github.com/SaulFein" target="_blank">Github</a></li>
         </ul>
@@ -85,10 +85,16 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js" charset="utf-8"></script>
       <script src="/vendor/scripts/marked.js"></script>
+      <script src="/vendor/scripts/page.js"></script>
       <script src="js/portfolio.js"></script>
       <script src="js/portfolio_view.js"></script>
+      <script src="js/aboutController.js"></script>
+      <script src="js/articleController.js"></script>
+      <script src="js/routes.js"></script>
+
+
       <script>
-      Article.fetchAll();
+      // Article.fetchAll();
     </script>
   </body>
 </html>
