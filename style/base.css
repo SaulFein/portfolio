@@ -2,11 +2,13 @@ body {
   line-height: 1.5;
   font-size: 100%;
   color: #313131;
-  background-color: #FFD596;
+  background-color: #FFF5D1;
 }
 
 img {
   max-width: 100%;
+  display: block;
+  margin: auto;
 }
 
 hr {
@@ -20,16 +22,16 @@ hr {
 }
 
 header{
-  background-color: #9BB58F;
+  background-color: #50514F;
   padding: 1%;
 }
 
 #firstheader {
-  background-color: #9BB58F;
+  background-color: #50514F;
 }
 
 nav{
-  background-color: #9BB58F;
+  background-color: #F25F5C;
 }
 
 #category-filter {
@@ -46,15 +48,18 @@ p {
 }
 
 h1{
-  color: #302B2F;
+  color: #FFF5D1;
   font-family: 'Rokkitt', serif;
   font-weight: 400;
+  padding: 1%;
+  text-align: center;
 }
 
 h1.mytitle {
   font-family: 'Rokkitt', serif;
   font-size: 3em;
   font-weight: 700;
+  text-align: center;
 }
 
 address {
@@ -70,6 +75,11 @@ li {
   font-family: 'Rokkitt', serif;
   font-weight: 400;
 }
+
+li .tab-icon-home{
+  font-family: 'Rokkitt', serif;
+
+}
 /*LINK STYLES
 =======================================*/
 
@@ -78,6 +88,9 @@ a, a:link, a:active {
   color: #302B2F;
   font-family: 'Rokkitt', serif;
   font-weight: 400;
+  padding: 1%;
+  text-decoration: none;
+  font-size: 1.25em;
 }
 
 a:hover, a:focus {
