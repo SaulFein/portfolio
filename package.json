@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "heroku class-13",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaulFein/portfolio.git"
+  },
+  "author": "brandon.feinstein@hotmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SaulFein/portfolio/issues"
+  },
+  "homepage": "https://github.com/SaulFein/portfolio#readme",
+  "dependencies": {
+    "express": "^4.13.3",
+    "express-request-proxy": "^1.0.11"
+  }
+}
