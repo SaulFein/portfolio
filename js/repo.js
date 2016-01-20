@@ -7,7 +7,7 @@
     var qs= '?per_page=100&sort=updated';
     $.get("/github/users/SaulFein/repos?per_page=100&sort=updated", function(data) {
       repos.all = data;
-      console.log("shit worx");
+      console.log("repos loaded");
         // console.log( "Load was performed.");
     }).done(callback);
     // $.ajax({
