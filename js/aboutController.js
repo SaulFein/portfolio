@@ -2,7 +2,6 @@
   var aboutController = {};
 
   aboutController.index = function() {
-    console.log("hell from about");
     $('#about').show().siblings().hide();
     repos.requestRepos(repoView.index);
     // DONE: Call a function to load all the data.
