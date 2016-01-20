@@ -5,17 +5,21 @@
 
   repos.requestRepos = function(callback) {
     var qs= '?per_page=100&sort=updated';
-  
-    $.ajax({
-      url: 'https://api.github.com/users/SaulFein/repos' + qs,
-      type: 'GET',
-      headers: {'Authorization': 'token ' + githubToken},
-      success: function(data, message, xhr){
-        repos.all=data;
-        console.log('data loaded');
-      },
-    })
-    .done(callback);
+    $.get("/github/users/SaulFein/repos?per_page=100&sort=updated", function(data) {
+      repos.all = data;
+      console.log("shit worx");
+        // console.log( "Load was performed.");
+    }).done(callback);
+    // $.ajax({
+    //   url: 'https://api.github.com/users/SaulFein/repos' + qs,
+    //   type: 'GET',
+    //   headers: {'Authorization': 'token ' + githubToken},
+    //   success: function(data, message, xhr){
+    //     repos.all=data;
+    //     console.log('data loaded');
+    //   },
+    // })
+    // .done(callback);
   };
 
     // DONE: How would you like to fetch your repos? Don't forget to call the callback.
