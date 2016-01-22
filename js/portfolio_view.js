@@ -17,7 +17,7 @@
     });
   };
 
-  articleView.handleCategoryFilter = function() {
+  articleView.handleCategoryFilter = function() { //try to figure out how to stop duplication
     $('#category-filter').on('change', function() {
       if ($(this).val()) {
         $('article').hide();

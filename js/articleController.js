@@ -9,9 +9,14 @@
   // Also be sure to hide all the main section elements, and reveal the #articles section:
 
   articlesController.index = function() {
-    Article.fetchAll(articleView.initIndexPage);
-    $('main > section').hide();
-    $('#articles').show();
+    if(!$('#articles2')[0]){
+      Article.fetchAll(articleView.initIndexPage); //figure out how to stop replication
+      $('main > section').hide();
+      $('#articles').show();
+    } else {
+      $('#articles').show();
+      $('#about').hide();
+    }
   };
 
   module.articlesController = articlesController;
