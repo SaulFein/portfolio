@@ -10,7 +10,7 @@
 
   articlesController.index = function() {
     if(!$('#articles2')[0]){
-      Article.fetchAll(articleView.initIndexPage); 
+      Article.fetchAll(articleView.initIndexPage);
       $('main > section').hide();
       $('#articles').show();
     } else {
