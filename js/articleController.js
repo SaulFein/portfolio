@@ -10,7 +10,7 @@
 
   articlesController.index = function() {
     if(!$('#articles2')[0]){
-      Article.fetchAll(articleView.initIndexPage); //figure out how to stop replication
+      Article.fetchAll(articleView.initIndexPage); 
       $('main > section').hide();
       $('#articles').show();
     } else {
