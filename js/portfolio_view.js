@@ -1,4 +1,3 @@
-// Configure a view object, to hold all our functions for dynamic updates and article-related event handlers.
 (function(module) {
   var articleView = {};
 
@@ -30,22 +29,6 @@
       $('#author-filter').val('');
     });
   };
-
-  // articleView.handleMainNav = function() {
-  //
-  //   $('.main-nav .tab').on('click', function(event) {
-  //     var $targetData = $(this).data('content');
-  //     $('.tab-content').each(function() {
-  //       if($(this).attr('id') === $targetData) {
-  //         $(this).show();
-  //       } else {
-  //         $(this).hide();
-  //       };
-  //     });
-  //   });
-  //
-  //   $('.main-nav .tab:first').click(); // Let's now trigger a click on the first .tab element, to set up the page.
-  // };
 
   articleView.setTeasers = function() {
     $('.article-body *:nth-of-type(n+2)').hide(); // Hide elements beyond the first 2 in any artcile body.
