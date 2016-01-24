@@ -21,12 +21,15 @@
   // DONE: If all the data is loaded, we can prep the UI and render the repos.
   repoView.index = function() {
     ui();
-    // $(repos.all).each(this.render($(this)));
-
-    // The jQuery `append` method lets us append an entire array of HTML elements at once,
-    // So we can use a little FP to transform our data-set into DOM nodes:
+  //   function stars(){
+  //     return repos.stargazers_count.value > 0;
+  //   }
+  //   $('#repolist').append(
+  //     repos.stargazers_count.filter(stars).map(render)
+  //   );
+  // };
     $('#repolist').append(
-      repos.with('full_name').map(render)
+      repos.with('stargazers_count').map(render)
     );
   };
 
