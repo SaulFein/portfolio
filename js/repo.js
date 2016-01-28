@@ -9,6 +9,7 @@
           '&sort=updated')
     .done(function(data, message, xhr) { //on done sets repos.all to the data from the response
       repos.all = data;
+      console.log(data);
     })
     .done(callback); // on done fires the callback to set repos.all
   };
