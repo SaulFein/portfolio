@@ -12,7 +12,7 @@
 
   articleView.initIndexPage = function() {
     Article.all.forEach(function(a){  //appends each article to the articles section
-      $('#articles').append(a.toHtml());
+      $('#articles').append(a.toHtml());// toHtml method runs Handlebars compile on each article.
     });
     articleView.setTeasers();
   };

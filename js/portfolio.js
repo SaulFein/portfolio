@@ -13,7 +13,7 @@
 
   Article.prototype.toHtml = function() { //this prototype method compiles the handlebars template
     var template = Handlebars.compile($('#article-template').text());
-    return template(this);
+    return template(this); // 'this' is each article passing through
   };
 
   Article.loadAll = function(rawData) { //this method takes in rawData as a param and sets Article.all = to rawData array and creates a new Article object for each item in the array.
