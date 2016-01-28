@@ -3,9 +3,7 @@
 
   aboutController.index = function() {
     $('#about').show().siblings().hide();
-    repos.requestRepos(repoView.index);
-    // DONE: Call a function to load all the data.
-    // Pass a view function as a callback, so the view will render after the data is loaded.
+    repos.requestRepos(repoView.index); //AJAX request and on success run callback function repoView.index which puts repos into html
   };
 
   module.aboutController = aboutController;

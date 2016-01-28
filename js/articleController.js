@@ -2,19 +2,13 @@
 (function(module) {
   var articlesController = {};
 
-  // DONE: Create the `articles` table when the controller first loads, with the code that used to be in index.html:
-
-  // DONE: Setup a function that kicks off the fetching and rendering of articles, using the same
-  // code that used to be in index.html.
-  // Also be sure to hide all the main section elements, and reveal the #articles section:
-
   articlesController.index = function() {
-    if(!$('#articles2')[0]){
-      Article.fetchAll(articleView.initIndexPage);
-      $('main > section').hide();
-      $('#articles').show();
+    if(!$('#articles2')[0]){ //if articles2 has not been populated
+      Article.fetchAll();// fetch all from local storage or make $.getJSON call and set articles to local storage then append content through handlebars template to articles
+      $('main > section').hide(); //hide main sections
+      $('#articles').show(); // show #articles section (specific part of main)
     } else {
-      $('#articles').show();
+      $('#articles').show(); //if articles2 has been populated by fetctAll hide about section.
       $('#about').hide();
     }
   };
