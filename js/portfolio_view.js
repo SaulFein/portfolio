@@ -3,8 +3,8 @@
 
   articleView.setTeasers = function() {
     $('.article-body *:nth-of-type(n+2)').hide(); // Hide elements beyond the first 2 in any artcile body.
-    $('.read-on').on('click', function(e){ // shows full article body when read on is clicked
-      e.preventDefault();// prevents page refresh
+    $('.read-on').on('click', function(el){ // shows full article body when read on is clicked
+      el.preventDefault();// prevents page refresh
       $(this).siblings('.article-body').children().show();
       $(this).hide();
     });

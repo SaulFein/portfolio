@@ -4,6 +4,7 @@
   aboutController.index = function() {
     $('#about').show().siblings().hide();
     repos.requestRepos(repoView.index); //AJAX request and on success run callback function repoView.index which puts repos into html
+    Article.checkStorage();
   };
 
   module.aboutController = aboutController;

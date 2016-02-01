@@ -11,8 +11,9 @@
 
   Article.all = [];//Article.all object array
 
+  var template = Handlebars.compile($('#article-template').text());
+
   Article.prototype.toHtml = function() { //this prototype method compiles the handlebars template
-    var template = Handlebars.compile($('#article-template').text());
     return template(this); // 'this' is each article passing through
   };
 
@@ -24,15 +25,46 @@
 
   Article.fetchAll = function() {// this method checks to see if there is anthing in local storage and if there is it calls the loadAll function and parses out the rawData in local storage then runs the articleView.initIndexPage method.
     if (localStorage.rawData) {
+      //if etags exist
       Article.loadAll(JSON.parse(localStorage.rawData));
       articleView.initIndexPage();
 
     } else { //if local storage does not exist it runs $.getJSON ajax call to grab the rawData and put it into local storage and then calls the articleView.initIndexPage method.
-      $.getJSON('/data/my_projects.json', function(rawData) {
-        Article.loadAll(rawData);
-        localStorage.rawData = JSON.stringify(rawData);
-        articleView.initIndexPage();
+      $.ajax({
+        type: 'GET',
+        url: '/data/my_projects.json',
+        success: function(rawData, textStatus, request){
+          var eTag = request.getResponseHeader('ETag');
+          localStorage.eTag = eTag;
+          Article.loadAll(rawData);
+          localStorage.rawData = JSON.stringify(rawData);
+          articleView.initIndexPage();
+        },
+        error: function (request, textStatus, errorThrown) {
+          console.log(textStatus);
+        }
       });
+    }
+  };
+
+  Article.checkStorage = function() {
+    if(localStorage.rawData){
+      $.ajax({
+        type: 'HEAD',
+        url: '/data/my_projects.json',
+        complete: function(response){
+          if (localStorage.eTag === response.getResponseHeader('ETag')){
+            console.log('Etag match detected... Populating from local storage data');
+            Article.loadAll(JSON.parse(localStorage.rawData));
+          } else{
+            console.log('Etags did not match... Downloading new data');
+            Article.fetchAll();
+          }
+        }
+      });
+    } else {
+      console.log('No local storage detected... Downloading data');
+      Article.fetchAll();
     }
   };
 
