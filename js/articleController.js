@@ -1,23 +1,17 @@
 
 (function(module) {
-  var articlesController = {};
+  var projectsController = {};
 
-  // DONE: Create the `articles` table when the controller first loads, with the code that used to be in index.html:
-
-  // DONE: Setup a function that kicks off the fetching and rendering of articles, using the same
-  // code that used to be in index.html.
-  // Also be sure to hide all the main section elements, and reveal the #articles section:
-
-  articlesController.index = function() {
-    if(!$('#articles2')[0]){
-      Article.fetchAll(articleView.initIndexPage);
-      $('main > section').hide();
-      $('#articles').show();
+  projectsController.index = function() {
+    if(!$('#projects2')[0]){ //if projects2 has not been populated
+      Project.fetchAll();// fetch all from local storage or make $.getJSON call and set projects to local storage then append content through handlebars template to projects
+      $('main > section').hide(); //hide main sections
+      $('#projects').show(); // show #projects section (specific part of main)
     } else {
-      $('#articles').show();
+      $('#projects').show(); //if projects2 has been populated by fetctAll hide about section.
       $('#about').hide();
     }
   };
 
-  module.articlesController = articlesController;
+  module.projectsController = projectsController;
 })(window);

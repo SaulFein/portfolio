@@ -1,6 +1,6 @@
-(function(module) {
-  function Article (opts) {
-    this.author = opts.author;
+(function(module) {//IIFE
+  function Project (opts) { //Project object contstructor
+    this.author = opts.author; // setting the properties
     this.authorUrl = opts.authorUrl;
     this.title = opts.title;
     this.category = opts.category;
@@ -9,40 +9,64 @@
     this.img = opts.img;
   }
 
-  Article.all = [];
+  Project.all = [];//Project.all object array
 
-  Article.prototype.toHtml = function() {
-    var template = Handlebars.compile($('#article-template').text());
+  var template = Handlebars.compile($('#project-template').text());
 
-    this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
-    this.publishStatus = this.publishedOn ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
-    this.body = marked(this.body);
-
-    return template(this);
+  Project.prototype.toHtml = function() { //this prototype method compiles the handlebars template
+    return template(this); // 'this' is each article passing through
   };
 
-  Article.loadAll = function(rawData) {
-    rawData.sort(function(a,b) {
-      return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
-    });
-    Article.all = rawData.map(function(ele) {
-      return new Article(ele);
+  Project.loadAll = function(rawData) { //this method takes in rawData as a param and sets Project.all = to rawData array and creates a new Project object for each item in the array.
+    Project.all = rawData.map(function(ele) {
+      return new Project(ele);
     });
   };
 
-  Article.fetchAll = function() {
+  Project.fetchAll = function() {// this method checks to see if there is anthing in local storage and if there is it calls the loadAll function and parses out the rawData in local storage then runs the projectView.initIndexPage method.
     if (localStorage.rawData) {
-      Article.loadAll(JSON.parse(localStorage.rawData));
-      articleView.initIndexPage();
+      //if etags exist
+      Project.loadAll(JSON.parse(localStorage.rawData));
+      projectView.initIndexPage();
 
-    } else {
-      $.getJSON('/data/my_projects.json', function(rawData) { //rawData is not the array of objects
-        Article.loadAll(rawData);
-        localStorage.rawData = JSON.stringify(rawData);
-        articleView.initIndexPage();
+    } else { //if local storage does not exist it runs $.getJSON ajax call to grab the rawData and put it into local storage and then calls the projectView.initIndexPage method.
+      $.ajax({
+        type: 'GET',
+        url: '/data/my_projects.json',
+        success: function(rawData, textStatus, request){
+          var eTag = request.getResponseHeader('ETag');
+          localStorage.eTag = eTag;
+          Project.loadAll(rawData);
+          localStorage.rawData = JSON.stringify(rawData);
+          projectView.initIndexPage();
+        },
+        error: function (request, textStatus, errorThrown) {
+          console.log(textStatus);
+        }
       });
     }
   };
 
-  module.Article = Article;
+  Project.checkStorage = function() {
+    if(localStorage.rawData){
+      $.ajax({
+        type: 'HEAD',
+        url: '/data/my_projects.json',
+        complete: function(response){
+          if (localStorage.eTag === response.getResponseHeader('ETag')){
+            console.log('Etag match detected... Populating from local storage data');
+            Project.loadAll(JSON.parse(localStorage.rawData));
+          } else{
+            console.log('Etags did not match... Downloading new data');
+            Project.fetchAll();
+          }
+        }
+      });
+    } else {
+      console.log('No local storage detected... Downloading data');
+      Project.fetchAll();
+    }
+  };
+
+  module.Project = Project; // this attaches the Project object to the window.
 }) (window);
