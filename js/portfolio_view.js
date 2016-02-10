@@ -1,21 +1,21 @@
 (function(module) { //IIFE
-  var articleView = {}; // articleView object
+  var projectView = {}; // projectView object
 
-  articleView.setTeasers = function() {
-    $('.article-body *:nth-of-type(n+2)').hide(); // Hide elements beyond the first 2 in any artcile body.
+  projectView.setTeasers = function() {
+    $('.project-body *:nth-of-type(n+2)').hide(); // Hide elements beyond the first 2 in any artcile body.
     $('.read-on').on('click', function(el){ // shows full article body when read on is clicked
       el.preventDefault();// prevents page refresh
-      $(this).siblings('.article-body').children().show();
+      $(this).siblings('.project-body').children().show();
       $(this).hide();
     });
   };
 
-  articleView.initIndexPage = function() {
-    Article.all.forEach(function(a){  //appends each article to the articles section
-      $('#articles').append(a.toHtml());// toHtml method runs Handlebars compile on each article.
+  projectView.initIndexPage = function() {
+    Project.all.forEach(function(a){  //appends each project to the projects section
+      $('#projects').append(a.toHtml());// toHtml method runs Handlebars compile on each project.
     });
-    articleView.setTeasers();
+    projectView.setTeasers();
   };
 
-  module.articleView = articleView; //attaches articleView to window object
+  module.projectView = projectView; //attaches projectView to window object
 })(window);

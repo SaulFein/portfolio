@@ -1,5 +1,14 @@
 [
   {
+    "title":       "Voluntold",
+    "category":    "yelp app",
+    "author":      "A.J. Wohlfert, Brandon Feinstein, Henry Bi, Ryan David",
+    "authorUrl":   "http://voluntold.herokuapp.com/",
+    "publishedOn": "2016-01-29",
+    "img":         "/../img/Voluntold.png",
+    "body":        "<p>This is an app for people looking to volunteer in their area. The app has the user select from highest yeilding volunteer search results on yelp and then allow the user to enter in the location they would like to volluneer at. This app uses the Yelp API as well as the Google Maps API.</p>"
+  },
+  {
     "title":       "Slash Whooo?",
     "category":    "games",
     "author":      "A.J. Wohlfert, Ardian Ajvazi, Brandon Feinstein, Dan Schwartz",
