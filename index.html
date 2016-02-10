@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="style/base.css">
     <link rel="stylesheet" href="style/layout.css">
     <link rel="stylesheet" href="style/modules.css">
+    <link rel="stylesheet" href="style/unslider.css">
+
+
+    <!-- <link rel="stylesheet" href="css/gallery.theme.css"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Rokkitt:400,700|Raleway' rel='stylesheet' type='text/css'>
 
@@ -26,14 +30,14 @@
       </article>
     </script>
 
-    <script id="slide-template" type="text/x-handlebars-template">
+    <!-- <script id="slide-template" type="text/x-handlebars-template">
       <article id = "slide" class="clearfix" data-category="{{category}}">
         <header>
           <h1>{{title}}</h1>
           <a href="{{authorUrl}}"><img src="{{img}}"></a>
         </header>
       </article>
-    </script>
+    </script> -->
 
   </head>
   <body>
@@ -55,9 +59,17 @@
     </header>
     <main>
 
-      <section id="home-page">
-        <article class="template" data-category="cat">
-        </article>
+      <section id="home-page" class="my-slider">
+        <ul>
+          <li><div><a href="http://voluntold.herokuapp.com/"><img src="img/Voluntold.png"></a></div></li>
+          <li><div><a href="http://wohlfea.github.io/cup-game/"><img src="img/SlashWhooo.png"></a></div></li>
+          <li><div><a href="http://saulfein.github.io/vote-tracker/"><img src="img/RapBattle.png"></a></div></li>
+          <li><div><a href="http://saulfein.github.io/cookie-stand/"><img src="img/PatsSalmon.png"></a></div></li>
+          <li><div><a href="http://saulfein.github.io/donut_shop/"><img src="img/Delicious.png"></a></div></li>
+        </ul>
+
+        <!-- <article class="template" data-category="cat">
+        </article> -->
       </section>
 
       <section id="projects" class="tab-content">
@@ -92,6 +104,7 @@
       <footer>
       </footer>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      <script src="/vendor/unslider.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js" charset="utf-8"></script>
       <script src="/vendor/scripts/page.js"></script>
       <script src="js/portfolio.js"></script>
@@ -102,5 +115,18 @@
       <script src="js/aboutController.js"></script>
       <script src="js/homeController.js"></script>
       <script src="js/routes.js"></script>
+
+<script>
+$(document).ready(function($) {
+  $('.my-slider').unslider({
+    autoplay: true,
+    infinite: true,
+    delay: 3000,
+    nav: false,
+    arrows: false,
+  });
+});
+</script>
+
   </body>
 </html>
