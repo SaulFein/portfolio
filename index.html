@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style/modules.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Rokkitt:400,700|Raleway' rel='stylesheet' type='text/css'>
+
     <script id="project-template" type="text/x-handlebars-template">
       <article id = "projects2" class="clearfix" data-category="{{category}}">
         <header>
@@ -24,6 +25,16 @@
         <a href="#" class="read-on">Read on &rarr;</a>
       </article>
     </script>
+
+    <script id="slide-template" type="text/x-handlebars-template">
+      <article id = "slide" class="clearfix" data-category="{{category}}">
+        <header>
+          <h1>{{title}}</h1>
+          <a href="{{authorUrl}}"><img src="{{img}}"></a>
+        </header>
+      </article>
+    </script>
+
   </head>
   <body>
     <header class="site-header clearfix" id="firstheader">
@@ -35,14 +46,20 @@
       <nav class="main-nav">
         <div class="icon-menu"></div>
         <ul class="list-menu">
-          <li class="tab icon-home" data-content="projects"><a href="/">Home</a></li>
+          <li class="tab icon-home" data-content="project-flip"><a href="/">Home</a></li>
+          <li class="icon-power" data-content="projects"><a href="/projects">Projects</a></li>
           <li class="tab icon-rocket" data-content="about"><a href="/about">About</a></li>
-          <li class="icon-twitter3"><a href="https://twitter.com/SaulFein" target="_blank">Twitter</a></li>
           <li class="icon-github"><a href="https://github.com/SaulFein" target="_blank">Github</a></li>
         </ul>
       </nav>
     </header>
     <main>
+
+      <section id="home-page">
+        <article class="template" data-category="cat">
+        </article>
+      </section>
+
       <section id="projects" class="tab-content">
           <article class="template" data-category="cat">
             <header>
@@ -63,12 +80,12 @@
             </ul>
         </section>
           <section>
-            <h1>Some of my intrests:</h1>
+            <!-- <h1>Some of my intrests:</h1>
             <ul>
               <li>Coding</li>
               <li>Sharing what I've learned</li>
               <li>Hanging with my family</li>
-            </ul>
+            </ul> -->
           </section>
         </section>
       </main>
@@ -79,10 +96,11 @@
       <script src="/vendor/scripts/page.js"></script>
       <script src="js/portfolio.js"></script>
       <script src="js/portfolio_view.js"></script>
-      <script src="js/articleController.js"></script>
+      <script src="js/projectController.js"></script>
       <script src="js/repo.js"></script>
       <script src="js/repoView.js"></script>
       <script src="js/aboutController.js"></script>
+      <script src="js/homeController.js"></script>
       <script src="js/routes.js"></script>
   </body>
 </html>

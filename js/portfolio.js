@@ -12,9 +12,14 @@
   Project.all = [];//Project.all object array
 
   var template = Handlebars.compile($('#project-template').text());
+  var template2 = Handlebars.compile($('#slide-template').text());
 
   Project.prototype.toHtml = function() { //this prototype method compiles the handlebars template
     return template(this); // 'this' is each article passing through
+  };
+
+  Project.prototype.toHtml2 = function() { //this prototype method compiles the handlebars template // 'this' is each article passing through
+    return template2(this);
   };
 
   Project.loadAll = function(rawData) { //this method takes in rawData as a param and sets Project.all = to rawData array and creates a new Project object for each item in the array.

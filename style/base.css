@@ -4,7 +4,10 @@ body {
   color: #313131;
   background-color: #FFF5D1;
 }
-
+html, body {
+    margin: 0;
+    height: 100%;
+}
 img {
   max-width: 100%;
   display: block;
