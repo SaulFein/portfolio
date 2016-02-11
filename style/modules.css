@@ -39,7 +39,17 @@
   margin-right: .4em;
   font-size: 1.5em;
   padding: .5em .2em;
-  border-bottom: 1px solid #50514F;
+  /*border-bottom: 1px solid #50514F;*/
+}
+
+#recent-projects{
+  color: #302B2F;
+font-family: 'Syncopate', sans-serif;
+font-weight: 400;
+font-size: 2em;
+padding-top: 10%;
+padding-bottom: 2%;
+text-align: center;
 }
 
 #filters {
@@ -108,7 +118,7 @@
 
 .main-nav li {
   display: inline;
-  border-bottom: 1px solid #F25F5C;
+  /*border-bottom: 1px solid #F25F5C;*/
 
 }
 

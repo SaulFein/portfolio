@@ -53,8 +53,8 @@ p {
 }
 
 h1{
-  color: #FFF5D1;
-  font-family: 'Muli', sans-serif;
+  color: #302B2F;
+  font-family: 'Syncopate', sans-serif;
   font-weight: 400;
   padding: 1%;
   text-align: center;
@@ -92,11 +92,11 @@ li .tab-icon-home{
 a, a:link, a:active {
   list-style: none;
   color: #302B2F;
-  font-family: 'Rokkitt', serif;
+  font-family: 'Syncopate', sans-serif;
   font-weight: 400;
   /*padding: 1%;*/
   text-decoration: none;
-  font-size: 1.25em;
+  font-size: .75em;
 }
 
 a:hover, a:focus {
