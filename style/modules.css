@@ -42,8 +42,19 @@
   /*border-bottom: 1px solid #50514F;*/
 }
 
-#recent-projects{
+ #nameandlogo{
+  list-style: none;
   color: #302B2F;
+  font-family: 'Syncopate', sans-serif;
+  font-weight: 400;
+  /*padding-right: 30%;*/
+  text-decoration: none;
+  font-size: 1.25em;
+}
+
+
+#recent-projects {
+color: #302B2F;
 font-family: 'Syncopate', sans-serif;
 font-weight: 400;
 font-size: 2em;
@@ -64,6 +75,7 @@ text-align: center;
 
 .byline {
   color: #777;
+  text-align: center;
 }
 
 .byline a {
@@ -97,6 +109,10 @@ text-align: center;
   background-repeat: no-repeat;
 }
 
+.read-on {
+  margin-left: 2%;
+}
+
 @media only screen and (min-width: 640px) {
   .icon-menu {
     display: none;
@@ -104,11 +120,10 @@ text-align: center;
 
 .main-nav {
   padding: 0.1em;
-  /*width: 85%;*/
+  width: 100%;
   margin: auto;
-  /*padding-left: 2em;
-  padding-right: 2em;*/
   background: white;
+  border-bottom: thin #302B2F;
 }
 
 .main-nav ul {
@@ -122,4 +137,25 @@ text-align: center;
 
 }
 
+#nameandlogo{
+ list-style: none;
+ color: #302B2F;
+ font-family: 'Syncopate', sans-serif;
+ font-weight: 400;
+ padding-right: 0%;
+ text-decoration: none;
+ font-size: 1em;
+}
+}
+
+@media only screen and (min-width: 800px) {
+  #nameandlogo {
+    padding-right: 10%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  #nameandlogo {
+    padding-right: 30%;
+  }
 }

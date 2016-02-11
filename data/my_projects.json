@@ -24,7 +24,7 @@
     "authorUrl":   "http://saulfein.github.io/vote-tracker/",
     "publishedOn": "2015-11-13",
     "img":         "/img/RapBattle.png",
-    "body":        "<p>This project was created using HTML CSS JS and Chart.js.</p><p>This a Rap Battle Vote Tracker where the user gets to vote on their favorite Rap album. The votes are then displayed in a bar chart.</p><p>The audio clip is the instrumental version of Mobb Deep - 'Keep it Thorough'.</p>"
+    "body":        "<p>This project was created using HTML CSS JS and Chart.js. This a Rap Battle Vote Tracker where the user gets to vote on their favorite Rap album. The votes are then displayed in a bar chart. The audio clip is the instrumental version of Mobb Deep - 'Keep it Thorough'.</p>"
   },
   {
     "title":       "Pats Salmon Coookies",

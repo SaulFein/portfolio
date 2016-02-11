@@ -4,6 +4,8 @@
   homeController.index = function() {
     $('#projects').hide();
     $('#about').hide();
+    $('#background-head').show();
+    $('#recent-projects').show();
     $('.unslider').show();
     $('#home-page').show();
   };
