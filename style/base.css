@@ -6,6 +6,10 @@ body {
   /*background-color: #FFF5D1;*/
 }
 
+ul {
+-webkit-padding-start: 0px;
+}
+
 html, body {
     margin: 0;
     height: 100%;
