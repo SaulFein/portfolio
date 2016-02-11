@@ -53,7 +53,15 @@ p {
   padding: 1%;
 }
 
-h1{
+h1 {
+  color: #302B2F;
+  font-family: 'Syncopate', sans-serif;
+  font-weight: 400;
+  padding: 1%;
+  text-align: center;
+}
+
+h2 {
   color: #302B2F;
   font-family: 'Syncopate', sans-serif;
   font-weight: 400;

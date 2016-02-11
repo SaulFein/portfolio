@@ -69,6 +69,38 @@ text-align: center;
   text-align: center;
 }
 
+#contact-list {
+  text-align: center;
+}
+
+#contact-list li{
+  display: inline;
+  margin: 2%;
+  font-size: 2em;
+}
+
+#contact-list i{
+  display: inline;
+  /*padding: 2%;*/
+  font-size: 2em;
+}
+
+#footer-list {
+  text-align: center;
+}
+
+#footer-list li{
+  display: inline;
+  margin: 2%;
+  font-size: 2em;
+}
+
+#footer-list i{
+  display: inline;
+  /*padding: 2%;*/
+  font-size: 2em;
+}
+
 .template {
   display: none;
 }

@@ -9,12 +9,9 @@
     <link rel="stylesheet" href="style/layout.css">
     <link rel="stylesheet" href="style/modules.css">
     <link rel="stylesheet" href="style/unslider.css">
-<!-- <link rel="stylesheet" href="style/test.css"> -->
 
-    <!-- <link rel="stylesheet" href="css/gallery.theme.css"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Rokkitt:400,700|Raleway|Muli|Syncopate|Krona+One' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
 
     <script id="project-template" type="text/x-handlebars-template">
       <article id = "projects2" class="clearfix" data-category="{{category}}">
@@ -27,18 +24,8 @@
           </div>
         </header>
         <section class="project-body">{{{body}}}</section>
-        <!-- <a href="#" class="read-on">Read on &rarr;</a> -->
       </article>
     </script>
-
-    <!-- <script id="slide-template" type="text/x-handlebars-template">
-      <article id = "slide" class="clearfix" data-category="{{category}}">
-        <header>
-          <h1>{{title}}</h1>
-          <a href="{{authorUrl}}"><img src="{{img}}"></a>
-        </header>
-      </article>
-    </script> -->
 
   </head>
   <body>
@@ -47,13 +34,12 @@
       </section>
       <nav class="main-nav">
         <div class="icon-menu"></div>
-        <!-- <div class="nameandlogo">Brandon Feinstein</div> -->
         <ul class="list-menu">
           <li id="nameandlogo">Brandon Feinstein</li>
           <li data-content="project-flip"><a href="/"> HOME</a></li>
           <li data-content="projects"><a href="/projects"> PROJECTS</a></li>
           <li data-content="about"><a href="/about"> ABOUT</a></li>
-          <li><a href="https://github.com/SaulFein" target="_blank"> GITHUB</a></li>
+          <li><a href="/contact"> CONTACT</a></li>
         </ul>
       </nav>
     </header>
@@ -106,18 +92,42 @@
             <ul id="repolist">
             </ul>
         </section>
-          <section>
-            <!-- <h1>Some of my intrests:</h1>
+        </section>
+        <section id="about-me">
+          <h1>About me:</h1>
+          <p>Hi! My name is Brandon Feinstein. I am from Bellevue, WA and am currently living in Seattle, WA. I am a student at CodeFellows and currently taking their Fullstack JavaScript 401 course. Previously I worked as an Audio Video Technicain in the Silicon Valley and in the Washington D.C. Baltimore area. I first became interested in programing while working with some of the systems programmers at one of the A/V companies I worked for. I ended up taking a Crestron A/V programming class and that planted the seed that lead me to change careers.</p>
+          <h1>Some of my intrests:</h1>
+          <ul>
+            <li>Coding: learning new coding techniques, libraries and structures</li>
+            <li>Sharing what I've learned</li>
+            <li>Spending time with my family</li>
+            <li>Collecting Vinyl and Comics</li>
+            <li>Playing video games</li>
+            <li>Watching movies</li>
+          </ul>
+        </section>
+        <section id="contact">
+          <h1>Contact me:</h1>
+          <h2>brandon.feinstein@hotmail.com</h2>
+          <div id="contact-list">
             <ul>
-              <li>Coding</li>
-              <li>Sharing what I've learned</li>
-              <li>Hanging with my family</li>
-            </ul> -->
-          </section>
+              <li><a href="https://github.com/SaulFein"><i class="icon-github"></i></a></li>
+              <li><a href="https://twitter.com/SaulFein"><i class="icon-twitter"></i></a></li>
+              <li><a href="https://www.instagram.com/saulfein/"><i class="icon-instagram"></i></a></li>
+              <li><a href="https://www.facebook.com/brandon.feinstein"><i class="icon-facebook"></i></a></li>
+            </ul>
+          </div>
         </section>
       </main>
       <footer>
-
+        <div id="footer-list">
+          <ul>
+            <li><a href="https://github.com/SaulFein"><i class="icon-github"></i></a></li>
+            <li><a href="https://twitter.com/SaulFein"><i class="icon-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/saulfein/"><i class="icon-instagram"></i></a></li>
+            <li><a href="https://www.facebook.com/brandon.feinstein"><i class="icon-facebook"></i></a></li>
+          </ul>
+        </div>
       </footer>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
       <script src="/vendor/unslider.js"></script>
@@ -130,6 +140,7 @@
       <script src="js/repoView.js"></script>
       <script src="js/aboutController.js"></script>
       <script src="js/homeController.js"></script>
+      <script src="js/contactController.js"></script>
       <script src="js/routes.js"></script>
 
 <script>

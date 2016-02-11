@@ -11,13 +11,20 @@
       $('#home-page').hide();
       $('#projects').show(); // show #projects section (specific part of main)
       $('#about').show();
+      $('#about-me').hide();
+      $('#contact').hide();
+      $('#repolist').show();
 
     } else {
       $('#background-head').hide();
       $('#recent-projects').hide();
+      $('#about-me').hide();
       $('#home-page').hide();
       $('#projects').show(); //if projects2 has been populated by fetctAll hide about section.
       $('#about').show();
+      $('#contact').hide();
+      $('#repolist').show();
+
     }
     repos.requestRepos(repoView.index); //AJAX request and on success run callback function repoView.index which puts repos into html
     Project.checkStorage();
