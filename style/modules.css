@@ -71,12 +71,20 @@
 }
 
 #home-page {
+  padding-bottom: 1%;
     /*margin: auto;
     width: 80%;*/
 }
 
 .hometitles {
   color: #302b2f;
+}
+
+#background-head{
+  height:auto;
+  /*background-image:url("/img/deskbw.jpg");*/
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 @media only screen and (min-width: 640px) {
@@ -90,7 +98,7 @@
   margin: auto;
   /*padding-left: 2em;
   padding-right: 2em;*/
-  background: #F25F5C;
+  background: white;
 }
 
 .main-nav ul {

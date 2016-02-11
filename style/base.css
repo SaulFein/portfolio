@@ -1,9 +1,11 @@
 body {
+  width: 100%;
   line-height: 1.5;
   font-size: 100%;
   color: #313131;
-  background-color: #FFF5D1;
+  /*background-color: #FFF5D1;*/
 }
+
 html, body {
     margin: 0;
     height: 100%;
@@ -25,12 +27,12 @@ hr {
 }
 
 header{
-  background-color: #50514F;
+  /*background-color: #50514F;*/
   padding: 1%;
 }
 
 #firstheader {
-  background-color: #50514F;
+  /*background-color: #50514F;*/
 }
 
 nav{
@@ -52,16 +54,17 @@ p {
 
 h1{
   color: #FFF5D1;
-  font-family: 'Rokkitt', serif;
+  font-family: 'Muli', sans-serif;
   font-weight: 400;
   padding: 1%;
   text-align: center;
 }
 
 h1.mytitle {
-  font-family: 'Rokkitt', serif;
-  font-size: 3em;
+  font-family: 'Muli', sans-serif;
+  font-size: 2em;
   font-weight: 700;
+  box-shadow: 1px black;
   text-align: center;
 }
 

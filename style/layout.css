@@ -23,14 +23,3 @@
     /*padding: .1em .1em .1em 2em;*/
     float: none;
   }
-
-  #filters select {
-    width: 15em;
-    margin: .2em .2em;
-  }
-
-  #filters li {
-    width: 20em;
-    display: inline;
-  }
-}
