@@ -34,20 +34,21 @@ header{
   /*background-color: #50514F;*/
   padding: 1%;
 }
-
+/*
 #firstheader {
   border-bottom: thin solid #302B2F;
   /*background-color: #50514F;*/
-}
+}*/
 
 nav{
-  background-color: #F25F5C;
+  background-color: white;
 }
 
 #category-filter {
   background-color: grey;
   color:
 }
+
 
 /*TEXT STYLES
 =======================================*/
@@ -71,6 +72,12 @@ h2 {
   font-weight: 400;
   padding: 1%;
   text-align: center;
+
+}
+
+#email {
+  font-size: 1.2em;
+  font-size: 3.5vw;
 }
 
 h1.mytitle {
