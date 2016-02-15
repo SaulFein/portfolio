@@ -2,11 +2,13 @@
   var aboutController = {};
 
   aboutController.index = function() {
-    $('#about').show().siblings().hide();
+    $('#about-me').show();
+    $('#about').hide();
     $('#home-page').hide();
+    $('#background-head').hide();
+    $('#recent-projects').hide();
     $('#projects').hide();
-    repos.requestRepos(repoView.index); //AJAX request and on success run callback function repoView.index which puts repos into html
-    Project.checkStorage();
+    $('#contact').hide();
   };
 
   module.aboutController = aboutController;

@@ -2,6 +2,7 @@
   function Project (opts) { //Project object contstructor
     this.author = opts.author; // setting the properties
     this.authorUrl = opts.authorUrl;
+    this.githubUrl = opts.githubUrl;
     this.title = opts.title;
     this.category = opts.category;
     this.body = opts.body;
