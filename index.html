@@ -20,7 +20,9 @@
           <a href="{{authorUrl}}"><img src="{{img}}"></a>
           <div class="byline">
             By <address>{{author}}</address>
-            {{publishStatus}}
+            <div class="ghlink">
+              <a href="{{githubUrl}}"><i class="icon-github"></i></a>
+            </div>
           </div>
         </header>
         <section class="project-body">{{{body}}}</section>
@@ -79,7 +81,9 @@
               <h1>Title</h1>
             <div class="byline">
               By <address><a href="">Author Name</a></address>
-              </div>
+              <div class="ghlink"></div>
+            </div>
+            
             </header>
             <section class="project-body"></section>
             <!-- <a href="#" class="read-on">Read on &rarr;</a> -->
@@ -137,7 +141,7 @@
       <script src="js/portfolio_view.js"></script>
       <script src="js/projectController.js"></script>
       <script src="js/repo.js"></script>
-      <script src="js/repoView.js"></script>
+      <!-- <script src="js/repoView.js"></script> -->
       <script src="js/aboutController.js"></script>
       <script src="js/homeController.js"></script>
       <script src="js/contactController.js"></script>

@@ -40,9 +40,9 @@
   clear: both;
 }
 
-.main-nav:hover ul {
+/*.main-nav:hover ul {
   display: block;
-}
+}*/
 
 .main-nav li {
   margin-right: .4em;
@@ -110,6 +110,14 @@ text-align: center;
   font-size: 2em;
 }
 
+.ghlink i{
+  font-size: 3em;
+}
+
+.ghlink:hover a{
+  border: none;
+}
+
 .template {
   display: none;
 }
@@ -124,14 +132,14 @@ text-align: center;
   text-decoration: none;
 }
 
-.mobile-trigger {
+/*.mobile-trigger {
   width: 10%;
   float: right;
-}
+}*/
 
-.icon-menu {
+/*.icon-menu {
   hide
-}
+}*/
 
 #home-page {
   padding-bottom: 1%;

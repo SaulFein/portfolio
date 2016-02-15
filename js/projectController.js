@@ -26,7 +26,7 @@
       $('#repolist').show();
 
     }
-    repos.requestRepos(repoView.index); //AJAX request and on success run callback function repoView.index which puts repos into html
+    // repos.requestRepos(repoView.index); //AJAX request and on success run callback function repoView.index which puts repos into html
     Project.checkStorage();
   };
 

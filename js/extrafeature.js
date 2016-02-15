@@ -10,6 +10,7 @@ $(document).ready(function($) {
 
 $('#ham-menu').click(function(){
   // $('.list-menu').toggle();
+  $('.main-nav ul').show();
   $('#ham-menu').toggleClass('icon-menu icon-cross');
   $('.icon-cross').click(function(){
     $('.list-menu').hide();
