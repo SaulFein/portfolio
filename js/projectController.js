@@ -7,6 +7,7 @@
       Project.fetchAll();// fetch all from local storage or make $.getJSON call and set projects to local storage then append content through handlebars template to projects
       $('main > section').hide();//hide main sections
       $('#background-head').hide();
+      $('#background-contact').hide();
       $('#recent-projects').hide();
       $('#home-page').hide();
       $('#projects').show(); // show #projects section (specific part of main)
@@ -17,6 +18,7 @@
 
     } else {
       $('#background-head').hide();
+      $('#background-contact').hide();
       $('#recent-projects').hide();
       $('#about-me').hide();
       $('#home-page').hide();
@@ -27,7 +29,7 @@
 
     }
     // repos.requestRepos(repoView.index); //AJAX request and on success run callback function repoView.index which puts repos into html
-    Project.checkStorage();
+    // Project.checkStorage();
   };
 
   module.projectsController = projectsController;
