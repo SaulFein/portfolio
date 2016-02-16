@@ -16,7 +16,6 @@
       $('#contact').hide();
       $('#repolist').show();
 
-
     } else {
       $('#background-head').hide();
       $('#background-contact').hide();
@@ -30,7 +29,7 @@
 
     }
     // repos.requestRepos(repoView.index); //AJAX request and on success run callback function repoView.index which puts repos into html
-    Project.checkStorage();
+    // Project.checkStorage();
   };
 
   module.projectsController = projectsController;
