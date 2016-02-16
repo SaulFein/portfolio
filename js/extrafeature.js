@@ -10,17 +10,30 @@ $(document).ready(function($) {
 
 $('#ham-menu').click(function(){
   // $('.list-menu').toggle();
-  $('.main-nav ul').show();
   $('#ham-menu').toggleClass('icon-menu icon-cross');
-  $('.icon-cross').click(function(){
-    $('.list-menu').hide();
-  });
-  $('.icon-menu').click(function(){
-    $('.list-menu').show();
-  });
+  $('#list-menu').toggleClass('lm-height lm-close');
+
+  // $('.list-menu').toggleClass('lm-close');
 
 });
 
+$('.icon-cross').click(function(){
+  $('.main-nav ul li').toggleClass('drop');
+  // $('.list-menu').toggleClass('lm-close');
+
+});
+$('.icon-menu').click(function(){
+  $('.main-nav ul li').toggleClass('drop');
+  // $('.list-menu').toggleClass('lm-height');
+
+
+});
+
+
+
+// $('a').click(function(){
+//   $('nav').toggleClass('drop');
+// })
 
 //
 // $('#click_advance').click(function(){

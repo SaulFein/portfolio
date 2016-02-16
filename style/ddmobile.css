@@ -1,0 +1,34 @@
+#list-menu {
+    position: relative;
+    left:0;
+    top: 2%;
+    z-index:1;
+}
+#list-menu li{
+    position: relative;
+    overflow:hidden;
+    height:0;
+    -webkit-transition:height 200ms ease-in;
+    -moz-transition:height 200ms ease-in;
+    -o-transition:height 200ms ease-in;
+    transition:height 200ms ease-in;
+}
+.drop {
+    height:36px !important;
+}
+
+nav .lm-height {
+  height: 250px;
+  -webkit-transition:height 200ms ease-in;
+  -moz-transition:height 200ms ease-in;
+  -o-transition:height 200ms ease-in;
+  transition:height 200ms ease-in;
+}
+
+.lm-close {
+  height: 37px;
+  -webkit-transition:height 200ms ease-in;
+  -moz-transition:height 200ms ease-in;
+  -o-transition:height 200ms ease-in;
+  transition:height 200ms ease-in;
+}
