@@ -18,7 +18,7 @@
 }
 
 nav .lm-height {
-  height: 25%;
+  height: 250px;
   -webkit-transition:height 200ms ease-in;
   -moz-transition:height 200ms ease-in;
   -o-transition:height 200ms ease-in;
@@ -26,7 +26,7 @@ nav .lm-height {
 }
 
 .lm-close {
-  height: 0%;
+  height: 37px;
   -webkit-transition:height 200ms ease-in;
   -moz-transition:height 200ms ease-in;
   -o-transition:height 200ms ease-in;
