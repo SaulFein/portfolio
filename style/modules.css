@@ -160,9 +160,36 @@ text-align: center;
 
 #background-head{
   height:auto;
-  /*background-image:url("/img/deskbw.jpg");*/
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+/*#background-head{
+  height:90%;
+  width: 100%;
+  background: url(/img/deskbw.jpg) no-repeat center top / cover;
+  display: none;
+}*/
+
+#background-contact{
+  height:auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#mypic {
+  min-width: 80px;
+}
+
+#mypic img{
+  width: 12%;
+  min-width: 80px;
+  margin: auto;
+  border-radius: 25%;
+  border: 3px solid #f25f5c;
+  /*padding: 20px;
+    width: 200px;
+    height: 150px; */
 }
 
 .read-on {
@@ -179,7 +206,7 @@ text-align: center;
 }*/
 
 nav .lm-height {
-  height: 37px;
+  height: 36px !important;
 }
 
 #firstheader {

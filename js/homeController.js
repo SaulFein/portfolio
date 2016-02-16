@@ -6,6 +6,7 @@
     $('#about-me').hide();
     $('#contact').hide();
     $('#repolist').hide();
+    $('#background-contact').hide();
     $('#background-head').show();
     $('#recent-projects').show();
     $('.unslider').show();
