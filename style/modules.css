@@ -13,6 +13,7 @@
     top: 0;
     right: 0;
     padding: 2%;
+    z-index: 2;
  /*float: right;*/
  font-size: 20px;
 }
@@ -22,6 +23,7 @@
     top: 0;
     right: 0;
     padding: 2%;
+    z-index: 2;
  /*float: right;*/
  font-size: 20px;
 }
@@ -34,7 +36,7 @@
 }
 
 .main-nav ul {
-  display: none;
+  /*display: none;*/
   padding: 0;
   list-style: none;
   clear: both;
@@ -184,7 +186,7 @@ text-align: center;
   border-bottom: thin #302B2F;
 }
 
-.list-menu {
+#list-menu {
   display: block !important;
 }
 
@@ -211,6 +213,7 @@ text-align: center;
  padding-right: 0%;
  text-decoration: none;
  font-size: 1em;
+ text-align: ceter:
 }
 }
 
@@ -223,5 +226,11 @@ text-align: center;
 @media only screen and (min-width: 1000px) {
   #nameandlogo {
     padding-right: 30%;
+  }
+}
+
+@media only screen and (max-width: 655px) {
+  #list-menu li{
+    padding-right: 0%;
   }
 }
