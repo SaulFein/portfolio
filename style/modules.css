@@ -121,6 +121,10 @@ text-align: center;
   border: none;
 }
 
+#footer-list a{
+  border: none;
+}
+
 .template {
   display: none;
 }
