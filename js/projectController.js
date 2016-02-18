@@ -26,10 +26,7 @@
       $('#about').show();
       $('#contact').hide();
       $('#repolist').show();
-
     }
-    // repos.requestRepos(repoView.index); //AJAX request and on success run callback function repoView.index which puts repos into html
-    // Project.checkStorage();
   };
 
   module.projectsController = projectsController;

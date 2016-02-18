@@ -3,7 +3,6 @@ body {
   line-height: 1.5;
   font-size: 100%;
   color: #313131;
-  /*background-color: #FFF5D1;*/
 }
 
 ul {
@@ -31,14 +30,8 @@ hr {
 }
 
 header{
-  /*background-color: #50514F;*/
   padding: 1%;
 }
-/*
-#firstheader {
-  border-bottom: thin solid #302B2F;
-  /*background-color: #50514F;*/
-}*/
 
 nav{
   background-color: white;
@@ -120,7 +113,6 @@ a, a:link, a:active {
   color: #302B2F;
   font-family: 'Syncopate', sans-serif;
   font-weight: 400;
-  /*padding: 1%;*/
   text-decoration: none;
   font-size: .65em;
 }
