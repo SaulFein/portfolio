@@ -1,10 +1,18 @@
 body {
+  width: 100%;
   line-height: 1.5;
   font-size: 100%;
   color: #313131;
-  background-color: #FFF5D1;
 }
 
+ul {
+-webkit-padding-start: 0px;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
 img {
   max-width: 100%;
   display: block;
@@ -16,27 +24,29 @@ hr {
   width: 80%;
 }
 
-.list-menu {
+#list-menu {
   font-family: 'Raleway', sans-serif;
 
 }
 
 header{
-  background-color: #50514F;
   padding: 1%;
 }
 
-#firstheader {
-  background-color: #50514F;
-}
-
 nav{
-  background-color: #F25F5C;
+  background-color: white;
 }
 
 #category-filter {
   background-color: grey;
   color:
+}
+
+#interests li{
+  padding: 1%;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
 }
 
 /*TEXT STYLES
@@ -47,18 +57,33 @@ p {
   padding: 1%;
 }
 
-h1{
-  color: #FFF5D1;
-  font-family: 'Rokkitt', serif;
+h1 {
+  color: #302B2F;
+  font-family: 'Syncopate', sans-serif;
   font-weight: 400;
   padding: 1%;
   text-align: center;
 }
 
+h2 {
+  color: #302B2F;
+  font-family: 'Syncopate', sans-serif;
+  font-weight: 400;
+  padding: 1%;
+  text-align: center;
+
+}
+
+#email a{
+  font-size: 1.2em;
+  font-size: 3vw;
+}
+
 h1.mytitle {
-  font-family: 'Rokkitt', serif;
-  font-size: 3em;
+  font-family: 'Muli', sans-serif;
+  font-size: 2em;
   font-weight: 700;
+  box-shadow: 1px black;
   text-align: center;
 }
 
@@ -86,14 +111,15 @@ li .tab-icon-home{
 a, a:link, a:active {
   list-style: none;
   color: #302B2F;
-  font-family: 'Rokkitt', serif;
+  font-family: 'Syncopate', sans-serif;
   font-weight: 400;
-  padding: 1%;
   text-decoration: none;
-  font-size: 1.25em;
+  font-size: .65em;
 }
 
 a:hover, a:focus {
+  color: #f25f5c;
+  border-bottom: thin solid #f25f5c;
 }
 
 a:visited {
