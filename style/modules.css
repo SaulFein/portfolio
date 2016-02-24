@@ -61,12 +61,6 @@
   text-align: center;
 }
 
-#filters {
-  padding: 0;
-  list-style: none;
-  text-align: center;
-}
-
 #contact-list {
   text-align: center;
 }
@@ -97,15 +91,15 @@
   font-size: 2em;
 }
 
+#footer-list a{
+  border: none;
+}
+
 .ghlink i{
   font-size: 3em;
 }
 
 .ghlink:hover a{
-  border: none;
-}
-
-#footer-list a{
   border: none;
 }
 
@@ -153,10 +147,6 @@
   margin: auto;
   border-radius: 25%;
   border: 3px solid #f25f5c;
-}
-
-.read-on {
-  margin-left: 2%;
 }
 
 #firstheader {
