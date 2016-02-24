@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="style/modules.css">
     <link rel="stylesheet" href="style/unslider.css">
     <link rel="stylesheet" href="style/ddmobile.css">
-
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Rokkitt:400,700|Raleway|Muli|Syncopate|Krona+One' rel='stylesheet' type='text/css'>
 
@@ -34,8 +32,7 @@
   </head>
   <body>
     <header class="site-header clearfix" id="firstheader">
-      <section class="heading-group-h1">
-      </section>
+      <section class="heading-group-h1"></section>
       <nav class="main-nav">
         <div id="ham-menu" class="icon-menu"></div>
         <ul id="list-menu" class="lm-close">
@@ -49,109 +46,82 @@
     </header>
     <div id="background-head"><img src="img/deskbw3.jpg"></div>
     <div id="background-contact"><img src="img/contactbg3.jpg"></div>
-
     <main>
-    <div id ="recent-projects">Recent Projects</div>
+      <div id ="recent-projects">Recent Projects</div>
       <section id="home-page" class="my-slider">
         <ul>
           <li>
-            <!-- <h1 class="hometitles">Voluntold</h1> -->
             <div><a href="http://voluntold.herokuapp.com/"><img src="img/Voluntold.png"></a></div>
           </li>
           <li>
-            <!-- <h1 class="hometitles">Slash Whooo</h1> -->
             <div><a href="http://wohlfea.github.io/cup-game/"><img src="img/SlashWhooo.png"></a></div>
           </li>
           <li>
-            <!-- <h1 class="hometitles">Rap Battle</h1> -->
             <div><a href="http://saulfein.github.io/vote-tracker/"><img src="img/RapBattle.png"></a></div>
           </li>
           <li>
-            <!-- <h1 class="hometitles">Pat's Salmon Cookies</h1> -->
             <div><a href="http://saulfein.github.io/cookie-stand/"><img src="img/PatsSalmon.png"></a></div>
           </li>
           <li>
-            <!-- <h1 class="hometitles">Delicious Donuts</h1> -->
             <div><a href="http://saulfein.github.io/donut_shop/"><img src="img/Delicious.png"></a></div>
           </li>
         </ul>
-        <!-- <article class="template" data-category="cat">
-        </article> -->
       </section>
-
       <section id="projects" class="tab-content">
-          <article class="template" data-category="cat">
-            <header>
-              <h1>Title</h1>
-            <div class="byline">
-              By <address><a href="">Author Name</a></address>
-              <div class="ghlink"></div>
-            </div>
-
-            </header>
-            <section class="project-body"></section>
-            <!-- <a href="#" class="read-on">Read on &rarr;</a> -->
-          </article>
+        <article class="template" data-category="cat">
+          <div class="byline">
+            <div class="ghlink"></div>
+          </div>
+          <section class="project-body"></section>
+        </article>
+      </section>
+      <section id="about" class="tab-content">
+        <section class="tab-content" id="repos">
+          <ul id="repolist"></ul>
         </section>
-        <section id="about" class="tab-content">
-          <header>
-          </header>
-          <section class="tab-content" id="repos">
-            <ul id="repolist">
-            </ul>
-        </section>
-        </section>
-        <section id="about-me">
-          <h1>About me:</h1>
-          <div id="mypic"><img src="img/brandon1.jpg"></div>
-          <p>Hi! My name is Brandon Feinstein. I am from Bellevue, WA and am currently living in Seattle, WA. I am a student at CodeFellows and currently taking their Fullstack JavaScript 401 course. Previously I worked as an Audio Video Technicain in the Silicon Valley and in the Washington D.C. Baltimore area. I first became interested in programing while working with some of the systems programmers at one of the A/V companies I worked for. I ended up taking a Crestron A/V programming class and that planted the seed that lead me to change careers.</p>
-          <h1>Some of my intrests:</h1>
-          <ul id="interests">
-            <li>Coding: learning new coding techniques, libraries and structures</li>
-            <li>Sharing what I've learned</li>
-            <li>Spending time with my family</li>
-            <li>Collecting Vinyl and Comics</li>
-            <li>Playing video games</li>
-            <li>Watching movies</li>
-          </ul>
-        </section>
-        <section id="contact">
-          <h1>Contact me:</h1>
-          <h2 id="email"><a href="mailto:brandon.feinstein@hotmail.com"</a>brandon.feinstein@hotmail.com</h2>
-          <!-- <div id="contact-list">
-            <ul>
-              <li><a href="https://github.com/SaulFein"><i class="icon-github"></i></a></li>
-              <li><a href="https://twitter.com/SaulFein"><i class="icon-twitter"></i></a></li>
-              <li><a href="https://www.facebook.com/brandon.feinstein"><i class="icon-facebook"></i></a></li>
-              <li><a href="https://www.instagram.com/saulfein/"><i class="icon-instagram"></i></a></li>
-            </ul>
-          </div> -->
-        </section>
-      </main>
-      <footer>
-        <div id="footer-list">
-          <ul>
-            <li><a href="https://github.com/SaulFein"><i class="icon-github"></i></a></li>
-            <li><a href="https://twitter.com/SaulFein"><i class="icon-twitter"></i></a></li>
-            <li><a href="https://www.facebook.com/brandon.feinstein"><i class="icon-facebook"></i></a></li>
-            <li><a href="https://www.instagram.com/saulfein/"><i class="icon-instagram"></i></a></li>
-          </ul>
-        </div>
-      </footer>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-      <script src="/vendor/unslider.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js" charset="utf-8"></script>
-      <script src="/vendor/scripts/page.js"></script>
-      <script src="js/portfolio.js"></script>
-      <script src="js/portfolio_view.js"></script>
-      <script src="js/projectController.js"></script>
-      <script src="js/repo.js"></script>
-      <!-- <script src="js/repoView.js"></script> -->
-      <script src="js/aboutController.js"></script>
-      <script src="js/homeController.js"></script>
-      <script src="js/contactController.js"></script>
-      <script src="js/extrafeature.js"></script>
-      <script src="js/routes.js"></script>
+      </section>
+      <section id="about-me">
+        <h1>About me:</h1>
+        <div id="mypic"><img src="img/brandon1.jpg"></div>
+        <p>Hi! My name is Brandon Feinstein. I am from Bellevue, WA and am currently living in Seattle, WA. I am a student at CodeFellows and currently taking their Fullstack JavaScript 401 course. Previously I worked as an Audio Video Technicain in the Silicon Valley and in the Washington D.C. Baltimore area. I first became interested in programing while working with some of the systems programmers at one of the A/V companies I worked for. I ended up taking a Crestron A/V programming class and that planted the seed that lead me to change careers.</p>
+        <h1>Some of my intrests:</h1>
+        <ul id="interests">
+          <li>Coding: learning new coding techniques, libraries and structures</li>
+          <li>Sharing what I've learned</li>
+          <li>Spending time with my family</li>
+          <li>Collecting Vinyl and Comics</li>
+          <li>Playing video games</li>
+          <li>Watching movies</li>
+        </ul>
+      </section>
+      <section id="contact">
+        <h1>Contact me:</h1>
+        <h2 id="email"><a href="mailto:brandon.feinstein@hotmail.com"</a>brandon.feinstein@hotmail.com</h2>
+      </section>
+    </main>
+    <footer>
+      <div id="footer-list">
+        <ul>
+          <li><a href="https://github.com/SaulFein"><i class="icon-github"></i></a></li>
+          <li><a href="https://twitter.com/SaulFein"><i class="icon-twitter"></i></a></li>
+          <li><a href="https://www.facebook.com/brandon.feinstein"><i class="icon-facebook"></i></a></li>
+          <li><a href="https://www.instagram.com/saulfein/"><i class="icon-instagram"></i></a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/vendor/unslider.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js" charset="utf-8"></script>
+    <script src="/vendor/scripts/page.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script src="js/portfolio_view.js"></script>
+    <script src="js/projectController.js"></script>
+    <script src="js/repo.js"></script>
+    <script src="js/aboutController.js"></script>
+    <script src="js/homeController.js"></script>
+    <script src="js/contactController.js"></script>
+    <script src="js/extrafeature.js"></script>
+    <script src="js/routes.js"></script>
 
   </body>
 </html>
