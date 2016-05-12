@@ -2,12 +2,12 @@
   {
     "title":       "Code Quiz",
     "category":    "quiz",
-    "author":      "Brandon Feinstein, Thom Nienow, Jamie Lim",
+    "author":      "Brandon Feinstein, Jamie Lim, Thom Nienow",
     "authorUrl":   "https://code-q.herokuapp.com/#/",
     "githubUrl":   "https://github.com/SaulFein/code-quiz",
     "publishedOn": "2016-05-06",
     "img":         "img/codequiz.png",
-    "body":        "<p>This is an app for people looking to test their coding knowledge. The app allows select a category and difficulty level. The app tracks the users score and progress so they can pick up where they left of next time they sign in. This app was built using the MEAN stack.</p>"
+    "body":        "<p>This is an app for people looking to test their coding knowledge. The app allows users to select a category and difficulty level. The app tracks the users score and progress so they can pick up where they left off the next time they signin. This app was built using the MEAN stack.</p>"
   },
   {
     "title":       "Voluntold",
