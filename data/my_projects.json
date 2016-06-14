@@ -40,14 +40,14 @@
     "body":        "<p>This project was created using HTML CSS JS and Chart.js. This a Rap Battle Vote Tracker where the user gets to vote on their favorite Rap album. The votes are then displayed in a bar chart. The audio clip is the instrumental version of Mobb Deep - 'Keep it Thorough'.</p>"
   },
   {
-    "title":       "Pats Salmon Coookies",
+    "title":       "Pats Salmon Cookies",
     "category":    "retail website",
     "author":      "Brandon Feinstein",
     "authorUrl":   "http://saulfein.github.io/cookie-stand/",
     "githubUrl":   "https://github.com/SaulFein/cookie-stand",
     "publishedOn": "2015-11-08",
     "img":         "img/PatsSalmon.png",
-    "body":        "<p>Pats Salmon Cookies website and sales data site: This is a website for Pats Salmon cookies created using JS, HTML and CSS. The customer facing website shows shop locations, history of the Salmon cookie, menu items, and merch.</p>"
+    "body":        "<p>Pats Salmon Cookies website and sales data site: This is a website for Pats Salmon Cookies created using JS, HTML and CSS. The customer facing website shows shop locations, history of the Salmon Cookie, menu items, and merch.</p>"
   },
   {
     "title":       "Delicious Donuts",
