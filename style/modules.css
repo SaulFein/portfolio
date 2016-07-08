@@ -200,6 +200,26 @@
   }
 }
 
+#brandon-link {
+  font-size: 1em;
+}
+
+a:hover, a:focus {
+  color: #f25f5c;
+  border-bottom: thin solid #f25f5c;
+}
+
+.project-body{
+  text-align: center;
+}
+
+.project-body p{
+  display: inline-block;
+  text-align: left;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
 @media only screen and (min-width: 800px) {
   #nameandlogo {
     padding-right: 10% !important;
@@ -215,5 +235,18 @@
 @media only screen and (max-width: 655px) {
   #list-menu li{
     padding-right: 0%;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .project-body{
+    text-align: center;
+  }
+
+  .project-body p{
+    display: inline-block;
+    text-align: left;
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
