@@ -204,9 +204,9 @@
   font-size: 1em;
 }
 
-a:hover, a:focus {
-  color: #f25f5c;
-  border-bottom: thin solid #f25f5c;
+#brandon-link:focus, #brandon-link:hover{
+  color: black;
+  border-bottom: none;
 }
 
 .project-body{

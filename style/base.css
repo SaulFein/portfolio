@@ -119,7 +119,7 @@ a, a:link, a:active {
 
 a:hover, a:focus {
   color: #f25f5c;
-  border-bottom: thin solid #f25f5c;
+  /*border-bottom: thin solid #f25f5c;*/
 }
 
 a:visited {
