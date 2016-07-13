@@ -17,7 +17,7 @@
     "githubUrl":   "https://github.com/rdavid8/Voluntold",
     "publishedOn": "2016-01-29",
     "img":         "img/Voluntold.png",
-    "body":        "<p>This is an app for people looking to volunteer in their area. The app has the user select from highest yeilding volunteer search results on yelp and then allow the user to enter in the location they would like to volluneer at. This app uses the Yelp API as well as the Google Maps API.</p>"
+    "body":        "<p>This is an app for people looking to volunteer in their area. The app has the user select from highest yielding volunteer search results on yelp and then allow the user to enter in the location they would like to volunteer at. This app uses the Yelp API as well as the Google Maps API.</p>"
   },
   {
     "title":       "Slash Whooo?",
