@@ -142,8 +142,8 @@
 }
 
 #mypic img{
-  width: 12%;
-  min-width: 80px;
+  width: 25%;
+  min-width: 150px;
   margin: auto;
   border-radius: 25%;
   border: 3px solid #f25f5c;

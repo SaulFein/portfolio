@@ -42,13 +42,29 @@ nav{
   color:
 }
 
-#interests li{
-  padding: 1%;
+#techskills li{
+  padding: .5%;
   text-align: center;
   font-family: 'Raleway', sans-serif;
   font-size: 1em;
 }
 
+#education li{
+  padding: .5%;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
+}
+
+#tscontainer h1{
+  padding: 0%;
+}
+
+#portrespic{
+  padding: 1%;
+  width: 50%;
+  margin: auto;
+}
 /*TEXT STYLES
 =======================================*/
 p {
