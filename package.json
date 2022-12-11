@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/SaulFein/portfolio#readme",
   "dependencies": {
-    "express": "^4.13.3",
+    "express": "^4.17.3",
     "express-request-proxy": "^1.0.11"
   }
 }
